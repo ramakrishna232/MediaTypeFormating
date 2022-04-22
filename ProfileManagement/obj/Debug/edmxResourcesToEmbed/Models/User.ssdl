@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ProfileManagementModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="UserCreation">
+    <Key>
+      <PropertyRef Name="UserName" />
+    </Key>
+    <Property Name="Name" Type="varchar" MaxLength="20" />
+    <Property Name="Email" Type="varchar" MaxLength="30" />
+    <Property Name="UserName" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Password" Type="varchar" MaxLength="20" />
+    <Property Name="Gender" Type="varchar" MaxLength="10" />
+    <Property Name="MobileNo" Type="bigint" Nullable="false" />
+    <Property Name="Organization" Type="varchar" MaxLength="20" />
+    <Property Name="Designation" Type="varchar" MaxLength="20" />
+    <Property Name="Reporting_Person" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityContainer Name="ProfileManagementModelStoreContainer">
+    <EntitySet Name="UserCreation" EntityType="Self.UserCreation" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
